@@ -37,4 +37,29 @@ public class JsonHelper {
         }
         return true;
     }
+
+    public static String getJsonDataAsText(JsonNode json, String param) {
+        return json.get(param) != null
+                ? json.get(param).textValue() : null;
+    }
+
+    public static Integer getJsonDataAsInteger(JsonNode json, String param) {
+        return json.get(param) != null
+                ? json.get(param).asInt() : 0;
+    }
+
+    public static Long getJsonDataAsLong(JsonNode json, String param) {
+        return json.get(param) != null
+                ? json.get(param).asLong() : 0l;
+    }
+
+    public static Double getJsonDataAsDouble(JsonNode json, String param) {
+        return json.get(param) != null
+                ? json.get(param).asDouble() : 0d;
+    }
+
+    public static Boolean getJsonDataAsBoolean(JsonNode json, String param) {
+        return json.get(param) != null ?
+                json.get(param).asBoolean() : false;
+    }
 }
