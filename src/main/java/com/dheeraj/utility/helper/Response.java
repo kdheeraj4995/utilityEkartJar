@@ -58,7 +58,7 @@ public class Response {
 
     public static Result getEkartResponse(EkartResponseCode ekartResponseCode) {
         ObjectNode result = Json.newObject();
-        result.put("style", ekartResponseCode.getStyle() == null ? "inline" : ekartResponseCode.getStyle());
+        result.put("style", ekartResponseCode.style == null ? "inline" : ekartResponseCode.style);
 //        result.put("errorCode", ekartResponseCode.getErrorCode() == 0 ? 1 : ekartResponseCode.getErrorCode());
         if (ekartResponseCode.title != null) {
             result.put("title", ekartResponseCode.title);
@@ -69,7 +69,7 @@ public class Response {
         if (ekartResponseCode.description != null) {
             result.put("description", ekartResponseCode.description);
         }
-        return status(ekartResponseCode.getStatusCode() > 199 ? ekartResponseCode.getStatusCode() : 400, result);
+        return status(ekartResponseCode.statusCode > 199 ? ekartResponseCode.statusCode : 400, result);
     }
 
 }
