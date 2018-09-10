@@ -59,7 +59,7 @@ public class Response {
     public static Result getEkartResponse(EkartResponseCode ekartResponseCode) {
         ObjectNode result = Json.newObject();
         result.put("style", ekartResponseCode.getStyle() == null ? "inline" : ekartResponseCode.getStyle());
-        result.put("errorCode", ekartResponseCode.getErrorCode() == 0 ? 1 : ekartResponseCode.getErrorCode());
+//        result.put("errorCode", ekartResponseCode.getErrorCode() == 0 ? 1 : ekartResponseCode.getErrorCode());
         if (ekartResponseCode.title != null) {
             result.put("title", ekartResponseCode.title);
         }

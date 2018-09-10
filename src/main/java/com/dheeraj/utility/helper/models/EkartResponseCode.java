@@ -8,17 +8,13 @@ public class EkartResponseCode {
 
     // Status Code to use for Response
     private int statusCode;
-
-    private int errorCode;
-
     public String title;
     public String subTitle;
     public String description;
 
-    public EkartResponseCode(String style, int statusCode, int errorCode) {
+    public EkartResponseCode(String style, int statusCode) {
         this.style = style;
         this.statusCode = statusCode;
-        this.errorCode = errorCode;
     }
 
     public String getStyle() {
@@ -27,9 +23,5 @@ public class EkartResponseCode {
 
     public int getStatusCode() {
         return statusCode;
-    }
-
-    public int getErrorCode() {
-        return errorCode;
     }
 }
